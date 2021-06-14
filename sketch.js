@@ -92,13 +92,11 @@ function draw() {
 }
  
  
-	if(keyDown("left") || keyDown("right") && packageSprite.isTouching(boxBase)){
-		helicopterSprite.x = width/2;
-		Matter.Body.setStatic(packageBody, true);
-	}
-
+	
 	if(packageSprite.isTouching(boxBase)){
 		
+		packageSprite.x = 400;
+		 helicopterSprite.x = 400;
 		textSize(17);  
 		stroke("yellow");
 		text('Well Done',530,331);
